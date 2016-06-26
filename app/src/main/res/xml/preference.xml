@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:title="About"
+        android:summary="Sample which was created in SupportLibrary PreferenceV7."
+        android:persistent="false"/>
+
+    <PreferenceCategory
+        android:title="CATEGORY">
+
+        <SwitchPreferenceCompat
+            android:key="switchKey"
+            android:title="Switch Sample"
+            android:summary="Change the contents of the switch."
+            />
+
+        <CheckBoxPreference
+            android:key="check1Key"
+            android:title="Check Sample1"
+            android:summary="Change the contents of the Check1."
+            android:defaultValue="false"/>
+
+        <CheckBoxPreference
+            android:key="check2Key"
+            android:title="Check Sample2"
+            android:summary="Change the contents of the Check2."
+            android:defaultValue="true"/>
+
+
+
+        <ListPreference
+            android:key="listKey"
+            android:title="List Sample"
+            android:summary="Call back if the value is changed."
+            android:entries="@array/listEntries"
+            android:entryValues="@array/listValues" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="EXTRA">
+
+        <Preference
+            android:key="feedbackKey"
+            android:title="Feedback"
+            android:summary="Send mail to the developer.\nThis is a sample."
+            android:persistent="false"/>
+        <Preference
+            android:key="helpKey"
+            android:title="Help"
+            android:summary="Check the use of the application.\nThis is a sample."
+            android:persistent="false"/>
+
+        <Preference
+            android:key="etcKey"
+            android:title="Etc"
+            android:persistent="false"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppThemePreferences" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="preferenceTheme">@style/AppThemePreferences.Overlay</item>
+        <item name="dialogTheme">@style/Theme.Preferences.Dialog</item>
+        <item name="alertDialogTheme">@style/Theme.Preferences.Dialog.Alert</item>
+        <item name="android:activatedBackgroundIndicator">?android:attr/selectableItemBackground</item>
+    </style>
+    <style name="AppThemePreferences.DayNight" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="preferenceTheme">@style/AppThemePreferences.Overlay</item>
+        <item name="dialogTheme">@style/Theme.Preferences.Dialog</item>
+        <item name="alertDialogTheme">@style/Theme.Preferences.Dialog.Alert</item>
+        <item name="android:activatedBackgroundIndicator">?android:attr/selectableItemBackground</item>
+    </style>
+
+
+    <style name="AppThemePreferences.Overlay" parent="@style/MyPreferencesThemeOverlay">
+
+        <!--
+            <item name="android:background">#ccc</item>
+
+            switch & checkbox color
+            <item name="colorAccent">#3F51B5</item>
+
+            preference title & summary color
+            <item name="android:textColorSecondary">#666</item>
+        -->
+
+        <!--category title color-->
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="Theme.Preferences.Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.Preferences.Dialog.Alert" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>

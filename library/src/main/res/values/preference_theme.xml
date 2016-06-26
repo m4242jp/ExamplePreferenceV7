@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <attr name="preferenceCategoryColor" format="reference|color"/>
+    　<attr name="preferenceTextColor" format="reference|color"/>
+
+
+    <style name="AppThemePreferences.Overlay" parent="@style/MyPreferencesThemeOverlay">
+    </style>
+
+    <style name="MyPreferencesThemeOverlay" parent="@style/PreferenceThemeOverlay">
+         <item name="preferenceCategoryColor">?android:attr/textColorPrimary</item>
+
+         <item name="preferenceScreenStyle">@style/Preference.PreferenceScreen</item>
+         <item name="preferenceCategoryStyle">@style/MyPreference.Category</item>
+         <item name="preferenceStyle">@style/MyPreference.Preference</item>
+         <item name="preferenceInformationStyle">@style/MyPreference.Information</item>
+         <item name="checkBoxPreferenceStyle">@style/MyPreference.CheckBoxPreference</item>
+         <item name="switchPreferenceCompatStyle">@style/MyPreference.SwitchPreferenceCompat</item>
+         <item name="dialogPreferenceStyle">@style/MyPreference.DialogPreference</item>
+         <item name="editTextPreferenceStyle">@style/MyPreference.DialogPreference.EditTextPreference</item>
+         <item name="preferenceFragmentStyle">@style/MyPreference.Fragment</item>
+         <item name="preferenceFragmentCompatStyle">@style/MyPreference.Fragment</item>
+         <item name="preferenceFragmentListStyle">@style/MyPreference.ListFragment</item>
+
+     </style>
+
+
+     <style name="MyPreference.Fragment" parent="@style/PreferenceFragment">
+         <item name="android:divider">@android:color/transparent</item>
+     </style>
+     <style name="MyPreference.ListFragment" parent="@style/PreferenceFragmentList">
+     </style>
+
+
+     <style name="MyPreference.Preference" parent="@style/Preference">
+         <item name="layout">@layout/preference_custom</item>
+     </style>
+     <style name="MyPreference.Category" parent="@style/Preference.Category">
+         <item name="layout">@layout/preference_category_custom</item>
+         <!-- The title should not dim if the category is disabled, instead only the preference children should dim. -->
+        <item name="shouldDisableView">false</item>
+        <item name="selectable">false</item>>
+    </style>
+
+
+    <style name="MyPreference.Information" parent="@style/Preference.Information">
+        <item name="layout">@layout/preference_custom_infomation</item>
+    </style>
+
+
+    <style name="MyPreference.CheckBoxPreference" parent="@style/Preference.CheckBoxPreference">
+        <item name="layout">@layout/preference_custom</item>
+    </style>
+
+    <style name="MyPreference.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat">
+        <item name="layout">@layout/preference_custom</item>
+    </style>
+
+    <style name="MyPreference.DialogPreference" parent="@style/Preference.DialogPreference">
+        <item name="layout">@layout/preference_custom</item>
+    </style>
+
+    <style name="MyPreference.DialogPreference.EditTextPreference" parent="@style/Preference.DialogPreference.EditTextPreference">
+        <item name="layout">@layout/preference_custom</item>
+    </style>
+
+
+
+    <style name="Preference_TextAppearanceMaterialBody2.Base">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Preference_TextAppearanceMaterialBody2" parent="Preference_TextAppearanceMaterialBody2.Base">
+    </style>
+</resources>
