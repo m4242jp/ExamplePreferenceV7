@@ -44,7 +44,7 @@ public class SamplePreferenceFragment extends UPreferenceFragment
                 for(int i=0;i < c;i++)setAllListener(((PreferenceGroup)preference).getPreference(i));
             } else {
                 if(preference.getKey()!=null) {
-                    if (preference.getClass().equals(Preference.class)) {
+                    if (preference.getClass().equals(Preference.class) || !preference.isPersistent()) {
                         setPreferenceClickListener(preference, this);
                     } else {
                         setPreferenceChangeListener(preference, this);
@@ -57,7 +57,7 @@ public class SamplePreferenceFragment extends UPreferenceFragment
         if(screen != null){
             if(screen instanceof PreferenceGroup){
                 int c = ((PreferenceGroup)screen).getPreferenceCount();
-                for(int i=0; i < c;i++)setAllListener(((PreferenceGroup)screen).getPreference(i));
+                for(int i=0; i < c;i++)setAllRemoveListener(((PreferenceGroup)screen).getPreference(i));
             } else {
                 setPreferenceClickListener(screen,null);
                 setPreferenceChangeListener(screen,null);
