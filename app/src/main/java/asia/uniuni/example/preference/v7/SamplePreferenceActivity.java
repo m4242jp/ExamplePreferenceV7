@@ -33,7 +33,6 @@ public class SamplePreferenceActivity extends AppCompatActivity {
             actionBar.setDisplayShowHomeEnabled(true);
             actionBar.setHomeButtonEnabled(true);
         }
-        // Load some preferences from resource
 
     }
 
